@@ -2,7 +2,7 @@ import React from 'react';
 
 const PlaylistList = ({ playlists, selectedPlaylist, handlePlaylistSelect }) => {
     return(
-        <div className="bg-[#404040] rounded-xl h-full w-1/3">
+        <div className="bg-[#404040] rounded-xl h-full w-1/3 shadow-lg">
             <div className="bg-[#545454] w-full py-4 px-8 rounded-xl">
                 <h1 className="text-[#B7B7B7] font-bold text-4xl">Playlist List</h1>
             </div>

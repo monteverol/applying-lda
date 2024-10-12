@@ -15,7 +15,7 @@ const Navigation = () => {
     }
 
     return (
-        <div className="bg-[#404040] w-4/5 p-4 absolute top-10 left-1/2 -translate-x-1/2 flex flex-row gap-4 rounded-full">
+        <div className="bg-[#404040] w-4/5 p-4 absolute top-10 left-1/2 -translate-x-1/2 flex flex-row gap-4 rounded-full shadow-lg">
             <div onClick={() => handleNavigate('/movies')} className={`${isActive('/movies')} flex py-2 flex-row gap-4 items-center justify-center w-1/4 rounded-full shadow-md cursor-pointer`}>
                 <img src={movie_icon} alt="movie icon" className="h-4/5" />
                 <h1 className="font-bold text-3xl">Movies</h1>

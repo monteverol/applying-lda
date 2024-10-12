@@ -16,7 +16,7 @@ const AddItem = ({ onAddItem }) => {
     };
 
     return (
-        <div className="bg-[#545454] rounded-xl flex flex-row gap-8 px-8 py-4">
+        <div className="bg-[#545454] rounded-xl flex flex-row gap-8 px-8 py-4 shadow-lg">
             <RiAddCircleLine 
                 color="#808080" 
                 size={40} 
