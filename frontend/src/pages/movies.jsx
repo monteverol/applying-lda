@@ -63,7 +63,7 @@ const Movies = () => {
             {/* LOWER */}
             <div className="h-screen w-full snap-center p-16 flex flex-col gap-8">
                 <div className="w-full flex flex-row justify-between items-center">
-                    <h1 className="text-[#CFCFCF] text-6xl font-bold">Generated Playlists: Books</h1>
+                    <h1 className="text-[#CFCFCF] text-6xl font-bold">Generated Playlists: Movies</h1>
                     <button type="button" className="bg-[#545454] text-2xl text-[#999999] py-4 px-16 rounded-lg">
                         Edit
                     </button>
