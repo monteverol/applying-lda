@@ -52,6 +52,18 @@ const Movies = () => {
         });
     };
 
+    const handleRemovePlaylist = () => {
+        const updatedPlaylists = playlists.filter(playlist => playlist.id !== selectedPlaylist.id);
+        setPlaylists(updatedPlaylists);
+
+        // If there are still playlists remaining, select the first one. Otherwise, clear the selection.
+        if (updatedPlaylists.length > 0) {
+            setSelectedPlaylist(updatedPlaylists[0]);
+        } else {
+            setSelectedPlaylist(null); // No playlists left
+        }
+    };
+
     return (
         <div className="movies snap-y snap-mandatory h-screen w-full overflow-y-scroll">
             {/* UPPER */}
@@ -70,10 +82,18 @@ const Movies = () => {
                 </div>
                 <div className="flex flex-row gap-16 h-full">
                     {/* Playlist List (Left Side) */}
-                    <PlaylistList playlists={playlists} selectedPlaylist={selectedPlaylist} handlePlaylistSelect={handlePlaylistSelect} />
+                    <PlaylistList 
+                        playlists={playlists} 
+                        selectedPlaylist={selectedPlaylist} 
+                        handlePlaylistSelect={handlePlaylistSelect} 
+                    />
 
                     {/* Playlist Items (Right Side) */}
-                    <PlaylistItem handleAddItem={handleAddItem} selectedPlaylist={selectedPlaylist} />
+                    <PlaylistItem 
+                        handleAddItem={handleAddItem} 
+                        selectedPlaylist={selectedPlaylist} 
+                        handleRemovePlaylist={handleRemovePlaylist} 
+                    />
                 </div>
             </div>
         </div>
