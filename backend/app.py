@@ -14,6 +14,8 @@ import logging
 import gensim
 from gensim import corpora
 
+nltk.download('stopwords')
+
 # Initialize Flask app
 app = Flask(__name__)
 CORS(app)  # Enable CORS globally for all routes
